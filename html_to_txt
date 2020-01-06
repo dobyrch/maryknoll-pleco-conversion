@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+from bs4 import BeautifulSoup
+from pprint import pprint
+
+with open('A-html.html') as f:
+    soup = BeautifulSoup(f, 'html.parser')
+
+entries = []
+head = []
+rom = []
+han = []
+for p in soup.find_all('p'):
+    cls = p['class'][0]
+
+    if cls == 'ft10':
+        en = '4'
+        tw = '5'
+        zh = '6'
+    elif cls[-1] == '0':
+        en = '3'
+        tw = '4'
+        zh = '5'
+    elif cls[-1] == en:
+        if lastcls[-1] == en:
+            head.append(p.string)
+        else:
+            if any((head,rom,han)):
+                entries.append((head, rom, han))
+            head = [p.string]
+            rom = []
+            han = []
+    elif cls[-1] == tw:
+        rom.append(p.string)
+    elif cls[-1] == zh:
+        han.append(p.string)
+
+    lastcls = cls
+
+if lastcls[-1] != en:
+    entries.append((head, rom, han))
+
+pprint(entries)
