@@ -51,9 +51,8 @@ def poj_to_tailo(string):
 def main():
     entries = []
 
-    for p in range(1,60):
-        with open(f'A-{p}.html') as f:
-            entries.extend(get_entries(BeautifulSoup(f, 'html.parser')))
+    with open(f'A-html.html') as f:
+        entries.extend(get_entries(BeautifulSoup(f, 'html.parser')))
 
     for entry in entries:
         print(entry[0][0], entry[1][0] + newline + entry[2][0], sep='\t')
@@ -63,41 +62,57 @@ def get_entries(soup):
     head = []
     rom = []
     han = []
-    class_english = []
-    class_taiwanese = []
-    class_chinese = []
+    class_english = set()
+    class_taiwanese = set()
+    class_chinese = set()
+    class_ignore = set()
 
-    for line in soup.style.text.split():
-        ft = line[1:5]
+    for style in soup.find_all('style'):
+        for line in style.text.split():
+            match = re.match('\.(ft[0-9]+){', line)
+            if not match:
+                continue
 
-        if 'Arial' in line:
-            class_english.append(ft)
-        elif 'TaiCooperLtBTLight' in line:
-            class_taiwanese.append(ft)
-        elif 'PMingLiU' in line:
-            class_chinese.append(ft)
+            ft = match.group(1)
+
+            if 'Arial' in line:
+                class_english.add(ft)
+            elif 'TaiCooperLtBTLight' in line:
+                class_taiwanese.add(ft)
+            elif 'PMingLiU' in line:
+                class_chinese.add(ft)
+            else:
+                class_ignore.add(ft)
+
+    lastcls = None
 
     for p in soup.find_all('p'):
         cls = p['class'][0]
 
-        if cls in class_english:
-            if lastcls[-1] in class_english:
-                head.append(p.string.replace('\xA0', ' '))
+        if cls in class_ignore:
+            continue
+
+        elif cls in class_english:
+            if lastcls in class_english:
+                head.append(p.text.replace('\xA0', ' '))
             else:
-                if any((head,rom,han)):
+                if lastcls is not None:
                     entries.append((head, rom, han))
                 head = [p.text.replace('\xA0', ' ')]
                 rom = []
                 han = []
+
         elif cls in class_taiwanese:
             rom.append(p.text.replace('\xA0', ' '))
         elif cls in class_chinese:
             han.append(p.text.replace('\xA0', ' '))
+        else:
+            assert False
 
         lastcls = cls
 
     if lastcls in class_english:
-        print('?????', p)
+        print('FIXME', p)
     entries.append((head, rom, han))
 
 # Merge split lines
