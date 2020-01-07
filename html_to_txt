@@ -131,7 +131,8 @@ def get_entries(soup):
         rom[0] = poj_to_tailo(rom[0])
 
         if not head[0].startswith('-'):
-            head[0], _, rest = head[0].partition(',')
+            part = ':' if ': ' in head[0] else ','
+            head[0], _, rest = head[0].partition(part)
             if rest:
                 rest = rest.strip() + newline
 
