@@ -113,8 +113,10 @@ def get_entries(soup):
         # TODO: Check for entries containing anything other than alphanumeric,
         # commas, parens, ellipses, etc.
         head[0] = head[0].strip()
-        rom[0] = newline.join(rom[0].strip().split(', '))
-        han[0] = newline.join(han[0].strip().split(','))
+        #rom[0] = newline.join(rom[0].strip().split(', '))
+        #han[0] = newline.join(han[0].strip().split(','))
+        rom[0] = rom[0].strip()
+        han[0] = han[0].strip()
 
         rom[0] = poj_to_tailo(rom[0])
 
