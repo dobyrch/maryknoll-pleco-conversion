@@ -5,6 +5,7 @@ from pprint import pprint
 from string import ascii_uppercase
 
 magic = '❋❋❋❋❋'
+more_magic = '❋❋%%%❋❋'
 newline  = '\uEAB1'
 double_newline  = newline + ' ' + newline
 
@@ -157,7 +158,9 @@ def get_entries(soup):
 
         if cls in class_english:
             if lastcls in class_english:
-                head.append(p.text.replace('\xA0', ' '))
+                for br in p('br'):
+                    br.replaceWith(more_magic)
+                head.append(p.text.replace('\xA0', ' ').replace('-' + more_magic, '').replace(more_magic, ''))
             else:
                 if lastcls is not None:
                     append_entry(head, rom, han)
