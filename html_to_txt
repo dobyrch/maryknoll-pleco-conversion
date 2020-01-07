@@ -57,7 +57,8 @@ def main():
             entries.extend(get_entries(BeautifulSoup(f, 'html.parser')))
 
     for entry in entries:
-        print(entry[0][0], entry[1][0] + newline + entry[2][0], sep='\t')
+        #print(entry[0][0], entry[1][0] + newline + entry[2][0], sep='\t')
+        print(entry)
 
 def get_entries(soup):
     entries = []
@@ -86,6 +87,47 @@ def get_entries(soup):
             else:
                 class_ignore.add(ft)
 
+    def append_entry(head, rom, han):
+        if len(head) > 1:
+            #TODO: assert only one dash?
+            head[0] = ''.join(s.rstrip('-') for s in head)
+            del head[1:]
+        # TODO: If text in parens, remove - and join
+        if len(rom) > 1:
+            rom[0] = ''.join(rom)
+            del rom[1:]
+        if len(han) > 1:
+            han[0] = ''.join(han)
+            del han[1:]
+
+        if not head:
+            head.append('FIXME')
+        if not rom:
+            rom.append('FIXME')
+        if not han:
+            han.append('FIXME')
+
+        # TODO: Check for entries containing anything other than alphanumeric,
+        # commas, parens, ellipses, etc.
+        head[0] = head[0].strip()
+        rom[0] = newline.join(rom[0].strip().split(', '))
+        han[0] = newline.join(han[0].strip().split(','))
+
+        rom[0] = poj_to_tailo(rom[0])
+
+        if not head[0].startswith('-'):
+            head[0], _, rest = head[0].partition(',')
+            if rest:
+                rest += newline
+
+            entries.append(head[0] + '\t' + rest + rom[0] + newline + han[0])
+        else:
+            head[0] = head[0].lstrip('- ')
+            entries[-1] += double_newline + head[0] + newline + rom[0] + newline + han[0]
+
+        #if '(' in entry[1][0] or ')' in entry[1][0]:
+        #print(entry[1][0])
+
     lastcls = None
 
     for p in soup.find_all('p'):
@@ -102,7 +144,7 @@ def get_entries(soup):
                 head.append(p.text.replace('\xA0', ' '))
             else:
                 if lastcls is not None:
-                    entries.append((head, rom, han))
+                    append_entry(head, rom, han)
                 head = [p.text.replace('\xA0', ' ')]
                 rom = []
                 han = []
@@ -119,39 +161,7 @@ def get_entries(soup):
     if lastcls in class_english:
         assert False
 
-    entries.append((head, rom, han))
-
-# Merge split lines
-    for entry in entries:
-        if len(entry[0]) > 1:
-            #TODO: assert only one dash?
-            entry[0][0] = ''.join(s.rstrip('-') for s in entry[0])
-            del entry[0][1:]
-        # TODO: If text in parens, remove - and join
-        if len(entry[1]) > 1:
-            entry[1][0] = ''.join(entry[1])
-            del entry[1][1:]
-        if len(entry[2]) > 1:
-            entry[2][0] = ''.join(entry[2])
-            del entry[2][1:]
-
-        if not entry[0]:
-            entry[0].append('FIXME')
-        if not entry[1]:
-            entry[1].append('FIXME')
-        if not entry[2]:
-            entry[2].append('FIXME')
-
-        # TODO: Check for entries containing anything other than alphanumeric,
-        # commas, parens, ellipses, etc.
-        entry[0][0] = entry[0][0].strip()
-        entry[1][0] = newline.join(entry[1][0].strip().split(', '))
-        entry[2][0] = newline.join(entry[2][0].strip().split(','))
-
-        entry[1][0] = poj_to_tailo(entry[1][0])
-
-        #if '(' in entry[1][0] or ')' in entry[1][0]:
-        #print(entry[1][0])
+    append_entry(head, rom, han)
 
     return entries
 
