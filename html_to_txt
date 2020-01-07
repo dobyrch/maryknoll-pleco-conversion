@@ -38,6 +38,7 @@ def poj_to_tailo(string):
         else:
             word += '1'
 
+        #TODO: why not being replaced in entry for "abbess?"
         word = word.replace('Ch', 'Ts')
         word = word.replace('ch', 'ts')
         word = re.sub('O([ae])', r'U\1', word)
@@ -57,8 +58,8 @@ def main():
             entries.extend(get_entries(BeautifulSoup(f, 'html.parser')))
 
     for entry in entries:
-        #print(entry[0][0], entry[1][0] + newline + entry[2][0], sep='\t')
         print(entry)
+        pass
 
 def get_entries(soup):
     entries = []
@@ -95,6 +96,7 @@ def get_entries(soup):
         # TODO: If text in parens, remove - and join
         if len(rom) > 1:
             rom[0] = ''.join(rom)
+            #print(rom[0])
             del rom[1:]
         if len(han) > 1:
             han[0] = ''.join(han)
@@ -118,12 +120,12 @@ def get_entries(soup):
         if not head[0].startswith('-'):
             head[0], _, rest = head[0].partition(',')
             if rest:
-                rest += newline
+                rest = rest.strip() + newline
 
-            entries.append(head[0] + '\t' + rest + rom[0] + newline + han[0])
+            entries.append(head[0] + '\t' + rest + han[0] + newline + rom[0])
         else:
             head[0] = head[0].lstrip('- ')
-            entries[-1] += double_newline + head[0] + newline + rom[0] + newline + han[0]
+            entries[-1] += double_newline + head[0] + newline + han[0] + newline + rom[0]
 
         #if '(' in entry[1][0] or ')' in entry[1][0]:
         #print(entry[1][0])
