@@ -11,7 +11,7 @@ double_newline  = newline + ' ' + newline
 poj = re.compile(r'''
         (?<=[^a-zA-Z0-9])
         [abceghijklmnopstu]+
-        (?P<tone>[23578])?\1?
+        (?P<tone>[235789])?\1?
         [abceghijklmnopstu]*
         (?=[^a-zA-Z0-9])
     ''', re.VERBOSE | re.IGNORECASE)
