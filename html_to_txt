@@ -1,42 +1,146 @@
 #!/usr/bin/env python3
+import re
 from bs4 import BeautifulSoup
 from pprint import pprint
 
-with open('A-html.html') as f:
-    soup = BeautifulSoup(f, 'html.parser')
+magic = '❋❋❋❋❋'
+newline  = '\uEAB1'
+double_newline  = newline + ' ' + newline
 
-entries = []
-head = []
-rom = []
-han = []
-for p in soup.find_all('p'):
-    cls = p['class'][0]
+poj = re.compile(r'''
+        (?<=[^a-zA-Z0-9])
+        [abceghijklmnopstu]+
+        (?P<tone>[23578])?\1?
+        [abceghijklmnopstu]*
+        (?=[^a-zA-Z0-9])
+    ''', re.VERBOSE | re.IGNORECASE)
 
-    if cls == 'ft10':
-        en = '4'
-        tw = '5'
-        zh = '6'
-    elif cls[-1] == '0':
-        en = '3'
-        tw = '4'
-        zh = '5'
-    elif cls[-1] == en:
-        if lastcls[-1] == en:
-            head.append(p.string)
+parens = re.compile('\(.*\)')
+
+def poj_to_tailo(string):
+    string = ' ' + string.replace('+', 'o').replace('*', f'nn{magic}') + ' '
+    search_start = 1
+
+    while match := poj.search(string, search_start):
+        word = match[0]
+        match_start, match_end = match.span()
+        search_start = match_end
+
+        if p := parens.search(string):
+            if match_start > p.start() and match_end < p.end():
+                continue
+
+        if tone := match['tone']:
+            word = word.replace(tone, '') + tone
+        elif word[-1] in 'ptkh':
+            word += '4'
         else:
-            if any((head,rom,han)):
-                entries.append((head, rom, han))
-            head = [p.string]
-            rom = []
-            han = []
-    elif cls[-1] == tw:
-        rom.append(p.string)
-    elif cls[-1] == zh:
-        han.append(p.string)
+            word += '1'
 
-    lastcls = cls
+        word = word.replace('Ch', 'Ts')
+        word = word.replace('ch', 'ts')
+        word = re.sub('O([ae])', r'U\1', word)
+        word = re.sub('o([ae])', r'u\1', word)
+        word = word.replace('eng', 'ing')
 
-if lastcls[-1] != en:
+        string = string[:match_start] + word + string[match_end:]
+
+    return string[1:-1].replace(magic, '')
+
+
+def main():
+    entries = []
+
+    for p in range(1,60):
+        with open(f'A-{p}.html') as f:
+            entries.extend(get_entries(BeautifulSoup(f, 'html.parser')))
+
+    for entry in entries:
+        print(entry[0][0], entry[1][0] + newline + entry[2][0], sep='\t')
+
+def get_entries(soup):
+    entries = []
+    head = []
+    rom = []
+    han = []
+    class_english = []
+    class_taiwanese = []
+    class_chinese = []
+
+    for line in soup.style.text.split():
+        ft = line[1:5]
+
+        if 'Arial' in line:
+            class_english.append(ft)
+        elif 'TaiCooperLtBTLight' in line:
+            class_taiwanese.append(ft)
+        elif 'PMingLiU' in line:
+            class_chinese.append(ft)
+
+    for p in soup.find_all('p'):
+        cls = p['class'][0]
+
+        if cls in class_english:
+            if lastcls[-1] in class_english:
+                head.append(p.string.replace('\xA0', ' '))
+            else:
+                if any((head,rom,han)):
+                    entries.append((head, rom, han))
+                head = [p.text.replace('\xA0', ' ')]
+                rom = []
+                han = []
+        elif cls in class_taiwanese:
+            rom.append(p.text.replace('\xA0', ' '))
+        elif cls in class_chinese:
+            han.append(p.text.replace('\xA0', ' '))
+
+        lastcls = cls
+
+    if lastcls in class_english:
+        print('?????', p)
     entries.append((head, rom, han))
 
-pprint(entries)
+# Merge split lines
+    for entry in entries:
+        if len(entry[0]) > 1:
+            #TODO: assert only one dash?
+            entry[0][0] = ''.join(s.rstrip('-') for s in entry[0])
+            del entry[0][1:]
+        # TODO: If text in parens, remove - and join
+        if len(entry[1]) > 1:
+            entry[1][0] = ''.join(entry[1])
+            del entry[1][1:]
+        if len(entry[2]) > 1:
+            entry[2][0] = ''.join(entry[2])
+            del entry[2][1:]
+
+        if not entry[0]:
+            entry[0].append('FIXME')
+        if not entry[1]:
+            entry[1].append('FIXME')
+        if not entry[2]:
+            entry[2].append('FIXME')
+
+        # TODO: Check for entries containing anything other than alphanumeric,
+        # commas, parens, ellipses, etc.
+        entry[0][0] = entry[0][0].rstrip()
+        entry[1][0] = newline.join(entry[1][0].rstrip().split(', '))
+        entry[2][0] = newline.join(entry[2][0].rstrip().split(','))
+
+        entry[1][0] = poj_to_tailo(entry[1][0])
+
+        #if '(' in entry[1][0] or ')' in entry[1][0]:
+        #print(entry[1][0])
+
+    return entries
+
+# poj -> tailo
+#   - + -> o
+#   - * -> nn
+#   - tone numbers to end
+#   - ch -> ts
+#   - oa, oe -> ua, ue
+#   - eng -> ing
+
+if __name__ == '__main__':
+    main()
