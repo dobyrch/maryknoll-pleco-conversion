@@ -41,9 +41,10 @@ def poj_to_tailo(string):
         #TODO: why not being replaced in entry for "abbess?"
         word = word.replace('Ch', 'Ts')
         word = word.replace('ch', 'ts')
+        word = word.replace('Eng', 'Ing')
+        word = word.replace('eng', 'ing')
         word = re.sub('O([ae])', r'U\1', word)
         word = re.sub('o([ae])', r'u\1', word)
-        word = word.replace('eng', 'ing')
 
         string = string[:match_start] + word + string[match_end:]
 
