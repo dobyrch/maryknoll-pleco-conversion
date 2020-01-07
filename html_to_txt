@@ -2,6 +2,7 @@
 import re
 from bs4 import BeautifulSoup
 from pprint import pprint
+from string import ascii_uppercase
 
 magic = '❋❋❋❋❋'
 newline  = '\uEAB1'
@@ -51,8 +52,9 @@ def poj_to_tailo(string):
 def main():
     entries = []
 
-    with open(f'A-html.html') as f:
-        entries.extend(get_entries(BeautifulSoup(f, 'html.parser')))
+    for c in ascii_uppercase:
+        with open(f'src/{c}-html.html') as f:
+            entries.extend(get_entries(BeautifulSoup(f, 'html.parser')))
 
     for entry in entries:
         print(entry[0][0], entry[1][0] + newline + entry[2][0], sep='\t')
@@ -79,7 +81,7 @@ def get_entries(soup):
                 class_english.add(ft)
             elif 'TaiCooperLtBTLight' in line:
                 class_taiwanese.add(ft)
-            elif 'PMingLiU' in line:
+            elif 'MingLiU' in line:
                 class_chinese.add(ft)
             else:
                 class_ignore.add(ft)
@@ -92,7 +94,10 @@ def get_entries(soup):
         if cls in class_ignore:
             continue
 
-        elif cls in class_english:
+        if p.text in ('.', ',', '…', '\xA0', '(phonetic)'):
+            cls = lastcls
+
+        if cls in class_english:
             if lastcls in class_english:
                 head.append(p.text.replace('\xA0', ' '))
             else:
@@ -102,17 +107,18 @@ def get_entries(soup):
                 rom = []
                 han = []
 
-        elif cls in class_taiwanese:
-            rom.append(p.text.replace('\xA0', ' '))
         elif cls in class_chinese:
             han.append(p.text.replace('\xA0', ' '))
+        elif cls in class_taiwanese:
+            rom.append(p.text.replace('\xA0', ' '))
         else:
             assert False
 
         lastcls = cls
 
     if lastcls in class_english:
-        print('FIXME', p)
+        assert False
+
     entries.append((head, rom, han))
 
 # Merge split lines
@@ -138,9 +144,9 @@ def get_entries(soup):
 
         # TODO: Check for entries containing anything other than alphanumeric,
         # commas, parens, ellipses, etc.
-        entry[0][0] = entry[0][0].rstrip()
-        entry[1][0] = newline.join(entry[1][0].rstrip().split(', '))
-        entry[2][0] = newline.join(entry[2][0].rstrip().split(','))
+        entry[0][0] = entry[0][0].strip()
+        entry[1][0] = newline.join(entry[1][0].strip().split(', '))
+        entry[2][0] = newline.join(entry[2][0].strip().split(','))
 
         entry[1][0] = poj_to_tailo(entry[1][0])
 
