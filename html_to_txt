@@ -12,16 +12,18 @@ def main():
                 print(entry)
 
 
+magic = '❋❋❋❋❋'
 newline  = '\uEAB1'
 double_newline  = newline + ' ' + newline
-more_magic = '❋❋%%%❋❋'
 
 
 def get_entries(soup):
     entries = []
-    head = []
-    rom = []
-    han = []
+
+    english = []
+    taiwanese = []
+    chinese = []
+
     class_english = set()
     class_taiwanese = set()
     class_chinese = set()
@@ -98,8 +100,8 @@ def get_entries(soup):
         if cls in class_english:
             if lastcls in class_english:
                 for br in p('br'):
-                    br.replaceWith(more_magic)
-                head.append(p.text.replace('\xA0', ' ').replace('-' + more_magic, '').replace(more_magic, ''))
+                    br.replaceWith(magic)
+                head.append(p.text.replace('\xA0', ' ').replace('-' + magic, '').replace(magic, ''))
             else:
                 if lastcls is not None:
                     append_entry(head, rom, han)
@@ -124,8 +126,6 @@ def get_entries(soup):
     return entries
 
 
-magic = '❋❋❋❋❋'
-
 poj = re.compile(r'''
         (?<=[^a-zA-Z0-9])
         [abceghijklmnopstu]+
@@ -138,7 +138,9 @@ parens = re.compile('\([^)]+\)')
 
 
 def poj_to_tailo(string):
-    string = ' ' + string.replace('+', 'o').replace('*', f'nn{magic}') + ' '
+    string = string.replace('+', 'o')
+    string = string.replace('*', f'nn{magic}')
+    string = ' ' + string + ' '
     search_start = 1
 
     while match := poj.search(string, search_start):
