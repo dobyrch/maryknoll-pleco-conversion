@@ -1,77 +1,21 @@
 #!/usr/bin/env python3
 import re
-from bs4 import BeautifulSoup
-from pprint import pprint
 from string import ascii_uppercase
 
-magic = '❋❋❋❋❋'
-more_magic = '❋❋%%%❋❋'
-newline  = '\uEAB1'
-double_newline  = newline + ' ' + newline
-
-poj = re.compile(r'''
-        (?<=[^a-zA-Z0-9])
-        [abceghijklmnopstu]+
-        (?P<tone>[235789])?\1?
-        [abceghijklmnopstu]*
-        (?=[^a-zA-Z0-9])
-    ''', re.VERBOSE | re.IGNORECASE)
-
-parens = re.compile('\([^)]+\)')
-
-def poj_to_tailo(string):
-    string = ' ' + string.replace('+', 'o').replace('*', f'nn{magic}') + ' '
-    search_start = 1
-
-    while match := poj.search(string, search_start):
-        word = match[0]
-        match_start, match_end = match.span()
-        search_start = match_end
-
-        def in_parens():
-            nonlocal search_start, string, match_start, match_end
-            for p in parens.finditer(string):
-                if match_start > p.start() and match_end < p.end():
-                    #search_start = p.end()
-                    return True
-            return False
-
-        if in_parens():
-                continue
-
-        if tone := match['tone']:
-            word = word.replace(tone, '') + tone
-        elif word[-1] in 'ptkh':
-            word += '4'
-        else:
-            word += '1'
-
-        word = word.replace('Ch', 'Ts')
-        word = word.replace('ch', 'ts')
-        word = word.replace('Eng', 'Ing')
-        word = word.replace('eng', 'ing')
-        word = re.sub('O([ae])', r'U\1', word)
-        word = re.sub('o([ae])', r'u\1', word)
-
-        string = string[:match_start] + word + string[match_end:]
-
-    if 'ch' in string[1:-1].replace(magic, '') or \
-           'Ch' in string[1:-1].replace(magic, ''):
-        print('!!!', string[1:-1].replace(magic, ''))
-
-    return string[1:-1].replace(magic, '')
+from bs4 import BeautifulSoup
 
 
 def main():
-    entries = []
-
     for c in ascii_uppercase:
         with open(f'src/{c}-html.html') as f:
-            entries.extend(get_entries(BeautifulSoup(f, 'html.parser')))
+            for entry in get_entries(BeautifulSoup(f, 'html.parser')):
+                print(entry)
 
-    for entry in entries:
-        print(entry)
-        pass
+
+newline  = '\uEAB1'
+double_newline  = newline + ' ' + newline
+more_magic = '❋❋%%%❋❋'
+
 
 def get_entries(soup):
     entries = []
@@ -108,7 +52,6 @@ def get_entries(soup):
         # TODO: If text in parens, remove - and join
         if len(rom) > 1:
             rom[0] = ''.join(rom)
-            #print(rom[0])
             del rom[1:]
         if len(han) > 1:
             han[0] = ''.join(han)
@@ -124,8 +67,6 @@ def get_entries(soup):
         # TODO: Check for entries containing anything other than alphanumeric,
         # commas, parens, ellipses, etc.
         head[0] = head[0].strip()
-        #rom[0] = newline.join(rom[0].strip().split(', '))
-        #han[0] = newline.join(han[0].strip().split(','))
         rom[0] = rom[0].strip()
         han[0] = han[0].strip()
 
@@ -142,8 +83,6 @@ def get_entries(soup):
             head[0] = head[0].lstrip('- ')
             entries[-1] += double_newline + head[0] + newline + han[0] + newline + rom[0]
 
-        #if '(' in entry[1][0] or ')' in entry[1][0]:
-        #print(entry[1][0])
 
     lastcls = None
 
@@ -184,13 +123,56 @@ def get_entries(soup):
 
     return entries
 
-# poj -> tailo
-#   - + -> o
-#   - * -> nn
-#   - tone numbers to end
-#   - ch -> ts
-#   - oa, oe -> ua, ue
-#   - eng -> ing
+
+magic = '❋❋❋❋❋'
+
+poj = re.compile(r'''
+        (?<=[^a-zA-Z0-9])
+        [abceghijklmnopstu]+
+        (?P<tone>[235789])?\1?
+        [abceghijklmnopstu]*
+        (?=[^a-zA-Z0-9])
+    ''', re.VERBOSE | re.IGNORECASE)
+
+parens = re.compile('\([^)]+\)')
+
+
+def poj_to_tailo(string):
+    string = ' ' + string.replace('+', 'o').replace('*', f'nn{magic}') + ' '
+    search_start = 1
+
+    while match := poj.search(string, search_start):
+        word = match[0]
+        match_start, match_end = match.span()
+        search_start = match_end
+
+        def in_parens():
+            for p in parens.finditer(string):
+                if match_start > p.start() and match_end < p.end():
+                    return True
+            return False
+
+        if in_parens():
+                continue
+
+        if tone := match['tone']:
+            word = word.replace(tone, '') + tone
+        elif word[-1] in 'ptkh':
+            word += '4'
+        else:
+            word += '1'
+
+        word = word.replace('Ch', 'Ts')
+        word = word.replace('ch', 'ts')
+        word = word.replace('Eng', 'Ing')
+        word = word.replace('eng', 'ing')
+        word = re.sub('O([ae])', r'U\1', word)
+        word = re.sub('o([ae])', r'u\1', word)
+
+        string = string[:match_start] + word + string[match_end:]
+
+    return string[1:-1].replace(magic, '')
+
 
 if __name__ == '__main__':
     main()
