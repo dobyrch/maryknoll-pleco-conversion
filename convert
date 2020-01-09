@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+output='maryknoll.txt'
+
+for c in {A..Z}; do
+	if [ ! -f "src/${c}-html.html" ]; then
+		echo "Converting ${c}.pdf..."
+		pdftohtml -c -s "src/${c}.pdf" > /dev/null
+	fi
+done
+
+echo 'Converting html to text...'
+./html_to_txt > "${output}" && patch "${output}" 'tweaks.patch'
