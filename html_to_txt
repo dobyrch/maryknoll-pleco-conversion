@@ -12,7 +12,7 @@ def main():
                 print(entry)
 
 
-magic = '❋❋❋❋❋'
+magic = '☺☺☺☺☺'
 newline  = '\uEAB1'
 double_newline  = newline + ' ' + newline
 
@@ -20,9 +20,31 @@ double_newline  = newline + ' ' + newline
 def get_entries(soup):
     entries = []
 
-    english = []
-    taiwanese = []
-    chinese = []
+    def append_entry(english, taiwanese, chinese):
+        english = ''.join(s.replace('\xA0', ' ').rstrip('-') for s in english).strip()
+        # TODO: If text in parens, remove - and join as above
+        taiwanese = poj_to_tailo(''.join(s.replace('\xA0', ' ') for s in taiwanese).strip())
+        chinese = ''.join(s.replace('\xA0', ' ') for s in chinese).strip()
+
+        if not english:
+            english = 'FIXME'
+        if not taiwanese:
+            taiwanese = 'FIXME'
+        if not chinese:
+            chinese = 'FIXME'
+
+        # Lines starting with '-' indicate examples...
+        if not english.startswith('-'):
+            part = ':' if ': ' in english else ','
+            english, _, extra = english.partition(part)
+            if extra:
+                extra = extra.strip() + newline
+            entries.append(english + '\t' + extra + chinese + newline + taiwanese)
+        # ...which are appended to the previous entry
+        else:
+            english = english.lstrip('- ')
+            entries[-1] += double_newline + english + newline + chinese + newline + taiwanese
+
 
     class_english = set()
     class_taiwanese = set()
@@ -46,46 +68,10 @@ def get_entries(soup):
             else:
                 class_ignore.add(ft)
 
-    def append_entry(head, rom, han):
-        if len(head) > 1:
-            #TODO: assert only one dash?
-            head[0] = ''.join(s.rstrip('-') for s in head)
-            del head[1:]
-        # TODO: If text in parens, remove - and join
-        if len(rom) > 1:
-            rom[0] = ''.join(rom)
-            del rom[1:]
-        if len(han) > 1:
-            han[0] = ''.join(han)
-            del han[1:]
 
-        if not head:
-            head.append('FIXME')
-        if not rom:
-            rom.append('FIXME')
-        if not han:
-            han.append('FIXME')
-
-        # TODO: Check for entries containing anything other than alphanumeric,
-        # commas, parens, ellipses, etc.
-        head[0] = head[0].strip()
-        rom[0] = rom[0].strip()
-        han[0] = han[0].strip()
-
-        rom[0] = poj_to_tailo(rom[0])
-
-        if not head[0].startswith('-'):
-            part = ':' if ': ' in head[0] else ','
-            head[0], _, rest = head[0].partition(part)
-            if rest:
-                rest = rest.strip() + newline
-
-            entries.append(head[0] + '\t' + rest + han[0] + newline + rom[0])
-        else:
-            head[0] = head[0].lstrip('- ')
-            entries[-1] += double_newline + head[0] + newline + han[0] + newline + rom[0]
-
-
+    english = []
+    taiwanese = []
+    chinese = []
     lastcls = None
 
     for p in soup.find_all('p'):
@@ -101,27 +87,24 @@ def get_entries(soup):
             if lastcls in class_english:
                 for br in p('br'):
                     br.replaceWith(magic)
-                head.append(p.text.replace('\xA0', ' ').replace('-' + magic, '').replace(magic, ''))
+                english.append(p.text.replace('-' + magic, '').replace(magic, ''))
             else:
                 if lastcls is not None:
-                    append_entry(head, rom, han)
-                head = [p.text.replace('\xA0', ' ')]
-                rom = []
-                han = []
+                    append_entry(english, taiwanese, chinese)
+                english = [p.text]
+                taiwanese = []
+                chinese = []
 
         elif cls in class_chinese:
-            han.append(p.text.replace('\xA0', ' '))
+            chinese.append(p.text)
         elif cls in class_taiwanese:
-            rom.append(p.text.replace('\xA0', ' '))
+            taiwanese.append(p.text)
         else:
             assert False
 
         lastcls = cls
 
-    if lastcls in class_english:
-        assert False
-
-    append_entry(head, rom, han)
+    append_entry(english, taiwanese, chinese)
 
     return entries
 
