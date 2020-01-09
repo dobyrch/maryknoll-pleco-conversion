@@ -1,403 +1,367 @@
-52c25
+25c25
 < abbess	女院長,女主持li2 inn7-tiunn2 (Catholic), li2 tsu2-tshi5 (Bud-dhist)
 ---
 > abbess	女院長,女主持li2 inn7-tiunn2 (Catholic), li2 tsu2-tshi5 (Buddhist)
-54c27
+27c27
 < abbot	head monk of a temple院長,主持,廟公inn7-tiunn2 (Catho-lic), tsu2-tshi5 (Buddhist), bio7-kong1
 ---
 > abbot	head monk of a temple院長,主持,廟公inn7-tiunn2 (Catholic), tsu2-tshi5 (Buddhist), bio7-kong1
-112c85
+85c85
 < ablution of the chalice	洗聖爵se2 sing3-tsiok4 (Catho-lic)
 ---
 > ablution of the chalice	洗聖爵se2 sing3-tsiok4 (Catholic)
-251c224
+224c224
 < abstinence from flesh meat	小齋siau2-tsai1 (Catho-lic) day of abstinence小齋日siau2-tsai1-jit8 (Catholic) dispensation from abstinence免除守小齋bian2-ti5 siu2 siau2-tsai1 (Catholic) excused from abstinence解除守小齋kai2-ti5 siu2 siau2-tsai1 (Catholic)
 ---
 > abstinence from flesh meat	小齋siau2-tsai1 (Catholic) day of abstinence小齋日siau2-tsai1-jit8 (Catholic) dispensation from abstinence免除守小齋bian2-ti5 siu2 siau2-tsai1 (Catholic) excused from abstinence解除守小齋kai2-ti5 siu2 siau2-tsai1 (Catholic)
-341c314
+314c314
 < accidents of bread and wine alone remain	只有留麵酒的形狀tsi2-u7 lau5 mi7-tsiu2 e5 hing5, tsi2-u7 lau5 mi7-tsiu2 e5 hing5-the2 (Catholic) the accidents are not changed形像沒改變,麵酒形不變hing5-siong7 bo5 kai2-pian3, mi7-tsiu2-hing5 bo5 pian3 (Catho-lic)
 ---
 > accidents of bread and wine alone remain	只有留麵酒的形狀tsi2-u7 lau5 mi7-tsiu2 e5 hing5, tsi2-u7 lau5 mi7-tsiu2 e5 hing5-the2 (Catholic) the accidents are not changed形像沒改變,麵酒形不變hing5-siong7 bo5 kai2-pian3, mi7-tsiu2-hing5 bo5 pian3 (Catholic)
-628c601
+601c601
 < Acts of the Apostles	使徒行傳Su3-too5 Hing5-tuan7 (Prot-estant)
 ---
 > Acts of the Apostles	使徒行傳Su3-too5 Hing5-tuan7 (Protestant)
-1671,1672c1644
+1644,1645c1644
 < anarchy	FIXMEla1
 < anchorite	內亂,混亂7i-luan7, tsin1 luan7
 ---
 > anarchy	內亂,混亂lai7-luan7, tsin1 luan7
-1728c1700
+1701c1700
 < and	with和,跟kap4, ham5, tsham1, kah4 (used as con-junction connecting nouns but not adjec-tives)
 ---
 > and	with和,跟kap4, ham5, tsham1, kah4 (used as conjunction connecting nouns but not adjectives)
-2538c2510
+2511c2510
 < ascend mountain	go ashore上山tsiunn7-suann1 (ar-chaic)
 ---
 > ascend mountain	go ashore上山tsiunn7-suann1 (archaic)
-2553c2525
+2526c2525
 < Ash Wednesday	聖灰禮儀Sing3-hue1-le2-gi5 (Catholic) to distribute ashes抹聖灰buah4 sing3-hue1 (Catho-lic) to receive ashes領聖灰nia2 sing3-hue1 (Catholic)
 ---
 > Ash Wednesday	聖灰禮儀Sing3-hue1-le2-gi5 (Catholic) to distribute ashes抹聖灰buah4 sing3-hue1 (Catholic) to receive ashes領聖灰nia2 sing3-hue1 (Catholic)
-2628c2600
+2601c2600
 < aspirant	religious student修女生siu1-li2-sing1 (Catho-lic)
 ---
 > aspirant	religious student修女生siu1-li2-sing1 (Catholic)
-2752c2724
+2725c2724
 < astronomers	天文學家, 天文學者thian1-bun5-hak8-ka1, thian1-bun5-ha8kchi2a
 ---
 > astronomers	天文學家, 天文學者thian1-bun5-hak8-ka1, thian1-bun5-hak8tsia2
-2903c2875
+2876c2875
 < attend Sunday services	做禮拜tso3 le2-pai3 (Protes-tant)
 ---
 > attend Sunday services	做禮拜tso3 le2-pai3 (Protestant)
-5418c5390
+3836c3835
+< beginning	at first, in the beginning起頭,起初,起源khi2-thau5, khi2-tshoo1, guan5-thau5 from the beginning of this month月初gueh8-tshe1, tui3 tsit4 ko2ogoe8h tshe1-nih8 from the beginning of the world till now盤古開天以來phuan5-koo2 khai1-thian1 i2-lai5 from the beginning to the end從頭到尾tui3 thau5 kau3 bue2 in the beginning起初khi2-tshoo1, tong1-tshoo1, khi2-thau5 e5 si5, khai1-si2 e5 si5
+---
+> beginning	at first, in the beginning起頭,起初,起源khi2-thau5, khi2-tshoo1, guan5-thau5 from the beginning of this month月初gueh8-tshe1, tui3 tsit4 koo2gueh8 tshe1-nih8 from the beginning of the world till now盤古開天以來phuan5-koo2 khai1-thian1 i2-lai5 from the beginning to the end從頭到尾tui3 thau5 kau3 bue2 in the beginning起初khi2-tshoo1, tong1-tshoo1, khi2-thau5 e5 si5, khai1-si2 e5 si5
+5391c5390
 < burial service	葬禮,喪禮tsong3-sek4, an1-tsong3-le2 (Catho-lic), song1-le2
 ---
 > burial service	葬禮,喪禮tsong3-sek4, an1-tsong3-le2 (Catholic), song1-le2
-5850c5822
+5823c5822
 < cannot	不,不會be7 (expresses simple future improbabil-ity)
 ---
 > cannot	不,不會be7 (expresses simple future improbability)
-5899c5871
+5872c5871
 < cannot get through with my meaning, he is impenetrable	he won't listen講不通kong2 be7-thong1
 ---
 > cannot get through with my meaning	he is impenetrable: he won't listen講不通kong2 be7-thong1
-6196c6168
+6169c6168
 < cartoon	卡通,漫畫kha3-thong1, ban7-ue7, mang2-ga3 (pho-netic)
 ---
 > cartoon	卡通,漫畫kha3-thong1, ban7-ue7, mang2-ga3 (phonetic)
-6210c6182
+6183c6182
 < case	medicine case病例penn7-le7, khe2-suh4 (pho-netic)
 ---
 > case	medicine case病例penn7-le7, khe2-suh4 (phonetic)
-6830c6802
+6803c6802
 < cheese	乳酪,起司tshi2-juh4 (phonetic), tshi2-suh4 (pho-netic)
 ---
 > cheese	乳酪,起司tshi2-juh4 (phonetic), tshi2-suh4 (phonetic)
-6937c6909
+6910c6909
 < child	children小孩,子gin2-a2, kiann2, kiann2-ji5 (more com-mon terms)
 ---
 > child	children小孩,子gin2-a2, kiann2, kiann2-ji5 (more common terms)
-7133c7105
+7106c7105
 < church	church building禮拜堂,天主堂,聖堂,教堂le2-pai3-tng5 (Protes-tant), Thian1-tsu2-tng5, sing3-tng5 (Catholic), kau3-tng5
 ---
 > church	church building禮拜堂,天主堂,聖堂,教堂le2-pai3-tng5 (Protestant), Thian1-tsu2-tng5, sing3-tng5 (Catholic), kau3-tng5
-7298c7270
-< class	party, group, fleet, to help, to aid, assist, time, pack of letters sent under one cover, classifier for train, bus, ves-sel班,幫pang1
----
-> class	party, group, fleet, to help, to aid, assist, time, pack of letters sent under one cover, classifier for train, bus, vessel班,幫pang1
-7311c7283
+7284c7283
 < Classics, the canon of Confucius	Book of Changes, Odes, Book of History, Book of Rites, Spring, Autumn Annals五經,易經,詩經,書經,禮記,春秋Ngoo2-king1: Ek8-king1, Si1-king1, Su1-king1, Le2-ki3, Tshun1-tshiu1
 ---
 > Classics	the canon of Confucius: Book of Changes, Odes, Book of History, Book of Rites, Spring, Autumn Annals五經,易經,詩經,書經,禮記,春秋Ngoo2-king1: Ek8-king1, Si1-king1, Su1-king1, Le2-ki3, Tshun1-tshiu1
-7398c7370
+7371c7370
 < clergyman	神父,牧師sin5-hu7 (Catholic), bok8-su1 (Protes-tant)
 ---
 > clergyman	神父,牧師sin5-hu7 (Catholic), bok8-su1 (Protestant)
-7446c7418
+7419c7418
 < clinic, OPD	outpatient department門診部mng5-tsin2-poo7
 ---
 > clinic	OPD: outpatient department門診部mng5-tsin2-poo7
-8088c8060
+8061c8060
 < communion	Eucharist, Holy Communion聖體,聖餐Sing3-the2 (Catholic), Sing3-tshan1 (Protes-tant.) first communion初領聖體tshoo1-nia2 Sing3-the2 frequent communion勤領聖體khin5-nia2 Sing3-the2 spiritual communion神領聖體sin5-nia2 Sing3-the2 to distribute communion送聖體sang3 Sing3-the2 to receive communion領聖體,領聖餐nia2 Sing3-the2, nia2 Sing3-tshan1
 ---
 > communion	Eucharist, Holy Communion聖體,聖餐Sing3-the2 (Catholic), Sing3-tshan1 (Protestant.) first communion初領聖體tshoo1-nia2 Sing3-the2 frequent communion勤領聖體khin5-nia2 Sing3-the2 spiritual communion神領聖體sin5-nia2 Sing3-the2 to distribute communion送聖體sang3 Sing3-the2 to receive communion領聖體,領聖餐nia2 Sing3-the2, nia2 Sing3-tshan1
-8479c8451
+8452c8451
 < confessor of the faith	精修者tsing1-siu1-tsia2 (Catho-lic)
 ---
 > confessor of the faith	精修者tsing1-siu1-tsia2 (Catholic)
-8654c8626
+8627c8626
 < consecration at Mass	祝聖禮,成聖體tsiok4-sing3-le2 (Catho-lic), sing5 Sing3-the2-le2
 ---
 > consecration at Mass	祝聖禮,成聖體tsiok4-sing3-le2 (Catholic), sing5 Sing3-the2-le2
-9114c9086
+9087c9086
 < copy a film print	拷貝khap4-pih4, khop4-pih4 (pho-netic)
 ---
 > copy a film print	拷貝khap4-pih4, khop4-pih4 (phonetic)
-9132c9104
+9105c9104
 < cordially presented by…	a gift with compliments of…敬贈(bo2o-bo2o la5ng) king3-tsing7
 ---
 > cordially presented by…	a gift with compliments of…敬贈(boo2-boo2 lang5) king3-tsing7
-9191c9163
+9164c9163
 < correct course	the right way正道tsing3-to7 (Bud-dhist)
 ---
 > correct course	the right way正道tsing3-to7 (Buddhist)
-10391c10363
-< dean of a college or court of law	the director of a hospital, museum, one of the five Yuan under the Chinese govern-ment system including the premier院長inn7-tiunn2
----
-> dean of a college or court of law	the director of a hospital, museum, one of the five Yuan under the Chinese government system including the premier院長inn7-tiunn2
-10885c10857
+10858c10857
 < Dengue Fever	登革熱Ting1-kek4-jiat8, Tng1-ko5-jo2 (pho-netic)
 ---
 > Dengue Fever	登革熱Ting1-kek4-jiat8, Tng1-ko5-jo2 (phonetic)
-11262c11234
+11235c11234
 < devotion	spiritual nurture靈修ling5-siu1 (Protes-tant)
 ---
 > devotion	spiritual nurture靈修ling5-siu1 (Protestant)
-12498c12470
+12471c12470
 < doughnut	油煎圈餅tsinn3 e5 khang1-sim1 piann2, loonat4 (pho-netic)
 ---
 > doughnut	油煎圈餅tsinn3 e5 khang1-sim1 piann2, loonat4 (phonetic)
-18450c18422
-< get into the cycle of reincarnation	quicken, be reborn into another state of existence, a spirit becoming incarnate en-tering into the womb投胎tau5-thai1
----
-> get into the cycle of reincarnation	quicken, be reborn into another state of existence, a spirit becoming incarnate entering into the womb投胎tau5-thai1
-18622c18594
-< give a hint to a man so that he may understand	especially, some secret plot or unseen danger, explain something dif-ficult to understand, to unravel a mys-tery點破tiam2-phua3
----
-> give a hint to a man so that he may understand	especially, some secret plot or unseen danger, explain something difficult to understand, to unravel a mys-tery點破tiam2-phua3
-20093c20065
+20066c20065
 < hardware	computer hardware硬體in2-ti5 (pho-netic), ting7-the2
 ---
 > hardware	computer hardware硬體in2-ti5 (phonetic), ting7-the2
-20117c20089
+20090c20089
 < harmonica	口琴khau2-khim5, hah4-moo2-ni2-khah4 (pho-netic)
 ---
 > harmonica	口琴khau2-khim5, hah4-moo2-ni2-khah4 (phonetic)
-21126c21098
+21099c21098
 < holy figure	portrait, statue聖容sing3-iong5 (Catho-lic)
 ---
 > holy figure	portrait, statue聖容sing3-iong5 (Catholic)
-21129c21101
+21102c21101
 < Holy Ghost	the Holy Spirit聖神Sing3-sin5 (Catho-lic)
 ---
 > Holy Ghost	the Holy Spirit聖神Sing3-sin5 (Catholic)
-21683c21655
+21656c21655
 < hysteria	神經錯亂,歇斯底里sin5-king1 tsho3-luan7, hi1-si2-te1-li2 (pho-netic)
 ---
 > hysteria	神經錯亂,歇斯底里sin5-king1 tsho3-luan7, hi1-si2-te1-li2 (phonetic)
-21686c21658
+21659c21658
 < I	first person singular我,小弟,小妹gua2, (sio2-ti7, sio2-mo7e polite form referring to self) both you and I我們倆個lan2 nng7 e5 I am unworthy!豈敢!Khi2-kam2.
 ---
-> I	first person singular我,小弟,小妹gua2, (sio2-ti7, sio2-moe7 polite form referring to self) both you and I我們倆個lan2 nng7 e5 I am unworthy!豈敢!Khi2-kam2.
-21866c21838
+> I	first person singular我,小弟,小妹gua2, (sio2-ti7, sio2-mue7 polite form referring to self) both you and I我們倆個lan2 nng7 e5 I am unworthy!豈敢!Khi2-kam2.
+21839c21838
 < image or picture of an idol	佛像put8-siong7 (Bud-dhist)
 ---
 > image or picture of an idol	佛像put8-siong7 (Buddhist)
-21905c21877
+21878c21877
 < Immaculate Mother	無玷聖母Bu5-tiam3 Sing3-bo2 (Catho-lic)
 ---
 > Immaculate Mother	無玷聖母Bu5-tiam3 Sing3-bo2 (Catholic)
-22444c22416
+22417c22416
 < inch	English inch英吋ing1-tshun3, in2-tsih4 (pho-netic) one foot four inches一尺四寸tshioh4 si3 two inches long兩寸長nng7 tshun3 tng5
 ---
 > inch	English inch英吋ing1-tshun3, in2-tsih4 (phonetic) one foot four inches一尺四寸tshioh4 si3 two inches long兩寸長nng7 tshun3 tng5
-22697c22669
+22670c22669
 < indisposed	be in poor health欠安khiam3-an1 (po-lite expression)
 ---
 > indisposed	be in poor health欠安khiam3-an1 (polite expression)
-22766c22738
+22739c22738
 < industrial policy	產業政策san2-giap8 tsing3-tshek4 (ar-chaic)
 ---
 > industrial policy	產業政策san2-giap8 tsing3-tshek4 (archaic)
-23304c23276
+23277c23276
 < institute the Sacraments	立聖事lip8 Sing3-su7 (Catho-lic)
 ---
 > institute the Sacraments	立聖事lip8 Sing3-su7 (Catholic)
-23446c23418
+23419c23418
 < intercourse	來往,交往,交際lai5-ong2, kau1-pue5, kau1-tse3 illicit intercourse通姦thong1-kan1 sexual intercourse性交sing3-kau1, sio1-kan3 (vul-gar) hold friendly intercourse交際,應酬kau1-tse3, ing3-siu5 marital intercourse行房kiann5-pang5 social intercourse社交sia7-kau1
 ---
 > intercourse	來往,交往,交際lai5-ong2, kau1-pue5, kau1-tse3 illicit intercourse通姦thong1-kan1 sexual intercourse性交sing3-kau1, sio1-kan3 (vulgar) hold friendly intercourse交際,應酬kau1-tse3, ing3-siu5 marital intercourse行房kiann5-pang5 social intercourse社交sia7-kau1
-24374c24346
+24347c24346
 < karma	predestination, fate宿緣siok4-ian5 (Bud-dhism)
 ---
 > karma	predestination, fate宿緣siok4-ian5 (Buddhism)
-24446c24418
+24419c24418
 < ketchup	蕃茄醬tomato2 tsiunn3, khe1-tsiap4-puh4 (pho-netic)
 ---
 > ketchup	蕃茄醬tomato2 tsiunn3, khe1-tsiap4-puh4 (phonetic)
-24565c24537
+24538c24537
 < kindle	electronic book reader電子圖書閱讀器Khin1-too5 (pho-netic), Khin1-too5 tian7-tsu2-tsheh4 liu5-lam2-khi3 Kindle
 ---
 > kindle	electronic book reader電子圖書閱讀器Khin1-too5 (phonetic), Khin1-too5 tian7-tsu2-tsheh4 liu5-lam2-khi3 Kindle
-25527c25499
+25500c25499
 < Lent	大齋期,封齋期,四旬期tai7-tsai1-ki5, hong1-tsai1-ki5, su3-sun5-ki5 (Catho-lic) during lent封齋期間hong1-tsai1 lai7 Lent begins on Wednesday.星期三開始封齋期.Sing1-ki5 sann1 khai1-si2 hong1-tsai1-ki5.
 ---
 > Lent	大齋期,封齋期,四旬期tai7-tsai1-ki5, hong1-tsai1-ki5, su3-sun5-ki5 (Catholic) during lent封齋期間hong1-tsai1 lai7 Lent begins on Wednesday.星期三開始封齋期.Sing1-ki5 sann1 khai1-si2 hong1-tsai1-ki5.
-25644c25616
+25617c25616
 < liberate living creatures	birds or fish, in exchange for merit放生hong3-sing1 (Bud-dhism)
 ---
 > liberate living creatures	birds or fish, in exchange for merit放生hong3-sing1 (Buddhism)
-26483c26455
+26456c26455
 < loud speaker	擴音器khong3-siann1-ki1, suh4-phi2-kha3 (pho-netic)
 ---
 > loud speaker	擴音器khong3-siann1-ki1, suh4-phi2-kha3 (phonetic)
-28770c28742
+28743c28742
 < mist, vapor, smoke, hence	tobacco, opium煙ian1
 ---
 > mist	vapor, smoke, hence: tobacco, opium煙ian1
-29112c29084
-< moral obligations, the five human relationships between	prince and minister, father and son, husband and wife, broth-ers, friends五倫君臣父子夫婦兄弟朋友ngoo2-lun5: kun1-sin5, hu7-tsu2, hu1-hu7, hiann1-ti7, ping5-iu2
+28965c28964
+< money used in the wedding ceremony (margin money) to show family of bridegroom will care for the daughterin-law	結婚用的小銅錢叫緣錢ian5-tsinn5
+---
+> money used in the wedding ceremony (margin money) to show family of bridegroom will care for the daughter-in-law	結婚用的小銅錢叫緣錢ian5-tsinn5
+29085c29084
+< moral obligations, the five human relationships between	prince and minister, father and son, husband and wife, brothers, friends五倫君臣父子夫婦兄弟朋友ngoo2-lun5: kun1-sin5, hu7-tsu2, hu1-hu7, hiann1-ti7, ping5-iu2
 ---
 > moral obligations	the five human relationships between: prince and minister, father and son, husband and wife, brothers, friends五倫君臣父子夫婦兄弟朋友ngoo2-lun5: kun1-sin5, hu7-tsu2, hu1-hu7, hiann1-ti7, ping5-iu2
-29715c29687
+29688c29687
 < my	我的敝gua2 e5, pe3 (self-effacing expression) my house寒舍我家han5-sia3, pe3-sia3 (self-effacing ex-presssion) my wife我內人guan2 tsa1-boo2-lang5 with my own eyes親眼tshin1-bak8
 ---
 > my	我的敝gua2 e5, pe3 (self-effacing expression) my house寒舍我家han5-sia3, pe3-sia3 (self-effacing expresssion) my wife我內人guan2 tsa1-boo2-lang5 with my own eyes親眼tshin1-bak8
-29717c29689
+29690c29689
 < my dear parents, a greeting in a letter to parents, literally	kneeling down膝下tshek4-ha7
 ---
 > my dear parents	a greeting in a letter to parents, literally: kneeling down膝下tshek4-ha7
-30139c30111
+30112c30111
 < neon light	霓虹燈ge5-hong5-ting1, ne1-ong2-ting1 (pho-netic)
 ---
 > neon light	霓虹燈ge5-hong5-ting1, ne1-ong2-ting1 (phonetic)
-30402c30374
+30375c30374
 < nirvana	as a human aim涅槃liap4-phuan5 (Bud-dhist) to attain nirvana圓寂uan5-tsek8
 ---
 > nirvana	as a human aim涅槃liap4-phuan5 (Buddhist) to attain nirvana圓寂uan5-tsek8
-31116c31088
+31089c31088
 < obstruction	阻礙,阻礙物tsoo2-gai7, cho2oga7i-but8
 ---
 > obstruction	阻礙,阻礙物tsoo2-gai7, tsoo2gai7-but8
-31262c31234
+31235c31234
 < of	possive case的e5
 ---
 > of	possessive case的e5
-31320c31292
+31293c31292
 < offer a spiritual bouquet	獻神花hian3 sin5-hue1 (Catho-lic)
 ---
 > offer a spiritual bouquet	獻神花hian3 sin5-hue1 (Catholic)
-31865c31837
-< open	to drive, begin, to start, found, expand, eliminate, divide into, write down, to list, undo a package, to open a shop or business, make out a bill or a pre-scription, to dig a well, to bloom開khai1, khui1
----
-> open	to drive, begin, to start, found, expand, eliminate, divide into, write down, to list, undo a package, to open a shop or business, make out a bill or a prescription, to dig a well, to bloom開khai1, khui1
-32045c32017
+32018c32017
 < order	arrange, arrangement, put in order整頓,整理,順序tsing2-tun3, tsing2-li2, sun7-su7 in order to, for the purpose of, so as to為了thang1-lai5…, ui7 (boeh) the streets are in good order街道很整齊ke1-loo7 tsin1 tsing2-tse5 to put in order整理tsing2-li2 to be made to order定做的ting7-tso3 e5 to call to order叫人安靜kio3 lang5 an1-tsing7 to communicate orders通令thong1-ling7 to give an order下令ha7-ling7 to obey the orders of another聽他人的命令thiann1 lang5 e5 bing7-ling7
 ---
 > order	arrange, arrangement, put in order整頓,整理,順序tsing2-tun3, tsing2-li2, sun7-su7 in order to, for the purpose of, so as to為了thang1-lai5…, ui7 (bueh4) the streets are in good order街道很整齊ke1-loo7 tsin1 tsing2-tse5 to put in order整理tsing2-li2 to be made to order定做的ting7-tso3 e5 to call to order叫人安靜kio3 lang5 an1-tsing7 to communicate orders通令thong1-ling7 to give an order下令ha7-ling7 to obey the orders of another聽他人的命令thiann1 lang5 e5 bing7-ling7
-32402,32403c32374,32375
+32375,32376c32374,32375
 < over $10:00 to $10.99	十元多tsap8-khoo1-gua7
 < over $10:00 to $19:99	十幾元tsap8-gua7-khoo1
 ---
 > over $10.00 to $10.99	十元多tsap8-khoo1-gua7
 > over $10.00 to $19.99	十幾元tsap8-gua7-khoo1
-32724c32696
+32697c32696
 < pair	husband and wife伉儷khong3-le7 (polite ex-pression)
 ---
 > pair	husband and wife伉儷khong3-le7 (polite expression)
-32817c32789
+32790c32789
 < pansy	gay, homosexual同性戀(cha-poo e5) tong5-sing3-luan5, kong3-khann1-a2 (slang)
 ---
 > pansy	gay, homosexual同性戀(tsa1-poo1 e5) tong5-sing3-luan5, kong3-khann1-a2 (slang)
-34920c34892
+34893c34892
 < plastic wrap	preservative film or wrapping to keep food fresh保鮮膜pau5-sian1-moo5 (pho-netic), po2-sian2-moh8
 ---
 > plastic wrap	preservative film or wrapping to keep food fresh保鮮膜pau5-sian1-moo5 (phonetic), po2-sian2-moh8
-35342c35314
+35315c35314
 < political parties of Taiwan	KMT(blue camp), DDP (green), PFP (orange)國民黨（藍營), 民進黨（綠), 親民黨（橘）Kok4-bin5-tong2 (na5-ia5nn), Bin5-tsin3-tong2 (le8k), Tshin1-bin5-tong2 (kam-a2-sek)
 ---
 > political parties of Taiwan	KMT(blue camp), DDP (green), PFP (orange)國民黨（藍營), 民進黨（綠), 親民黨（橘）Kok4-bin5-tong2 (na5-iann5), Bin5-tsin3-tong2 (lek8), Tshin1-bin5-tong2 (kam1-a2-sek4)
-35690c35662
+35663c35662
 < postulator	列品案件處理人liat8-phin2 an3-kiann7 tshu2-li2-jin5 (Catho-lic)
 ---
 > postulator	列品案件處理人liat8-phin2 an3-kiann7 tshu2-li2-jin5 (Catholic)
-37046c37018
+37019c37018
 < propitiation	贖罪,贖罪祭,和解siok8-tsue7, siok8-tsue7-tse3 (Catho-lic), ho5-kai2
 ---
 > propitiation	贖罪,贖罪祭,和解siok8-tsue7, siok8-tsue7-tse3 (Catholic), ho5-kai2
-37208c37180
-< province	provincial, economical, to economize, to save, omit, examine oneself, understand, to visit one's sen-iors省sing2
----
-> province	provincial, economical, to economize, to save, omit, examine oneself, understand, to visit one's seniors省sing2
-37279c37251
+37252c37251
 < psalm	聖詠,詩篇,讚美歌sing3-ing7 (Catholic), si1-phian1 (Protes-tant), tsan3-bi2-kua1 to sing psalms歌詠,唱讚美歌ko1-king1, tshiunn3 tsan3-bi2-kua1
 ---
 > psalm	聖詠,詩篇,讚美歌sing3-ing7 (Catholic), si1-phian1 (Protestant), tsan3-bi2-kua1 to sing psalms歌詠,唱讚美歌ko1-king1, tshiunn3 tsan3-bi2-kua1
-37858c37830
+37831c37830
 < Queen of Heaven	上天之后Siong7-thian1 tsi1 Hoo7 (Catho-lic)
 ---
 > Queen of Heaven	上天之后Siong7-thian1 tsi1 Hoo7 (Catholic)
-38609c38581
-< receive and send out official documents	office clerk who takes care of the receiving and sending out of official cor-respondence收發siu1-huat4
----
-> receive and send out official documents	office clerk who takes care of the receiving and sending out of official correspondence收發siu1-huat4
-38697c38669
+38670c38669
 < recite Buddhist prayers	recite passages from the scriptures誦經siong7-king1 (Bud-dhism)
 ---
 > recite Buddhist prayers	recite passages from the scriptures誦經siong7-king1 (Buddhism)
-39242c39214
+39215c39214
 < relate ones sins & offenses	告罪ko3-tsue7 (Catho-lic)
 ---
 > relate ones sins & offenses	告罪ko3-tsue7 (Catholic)
-39360c39332
+39333c39332
 < religious medal	holy medal聖牌sing3-pai5 (Catho-lic)
 ---
 > religious medal	holy medal聖牌sing3-pai5 (Catholic)
-39662c39634
-< reply to a verbal attack	to speak in selfdefense, to defend oneself, to refute, to rebut, to put in a defense to an accusa-tion答辯tap4-pian7
+39635c39634
+< reply to a verbal attack	to speak in selfdefense, to defend oneself, to refute, to rebut, to put in a defense to an accusation答辯tap4-pian7
 ---
-> reply to a verbal attack	to speak in selfdefense, to defend oneself, to refute, to rebut, to put in a defense to an accusation答辯tap4-pian7
-39858c39830
-< residence moved to a location other than where a person lives for the purposes of voting in an election	phantom popu-lation幽靈人口iu1-ling5 jin5-khau2
----
-> residence moved to a location other than where a person lives for the purposes of voting in an election	phantom population幽靈人口iu1-ling5 jin5-khau2
-40121c40093
+> reply to a verbal attack	to speak in self-defense, to defend oneself, to refute, to rebut, to put in a defense to an accusation答辯tap4-pian7
+40094c40093
 < retire from unsavory activities, to reform	turn over a new leaf改邪歸正siu1-kha1 se2-tshiu2
 ---
 > retire from unsavory activities	to reform: turn over a new leaf改邪歸正siu1-kha1 se2-tshiu2
-43000c42972
+42973c42972
 < shells formerly used as currency, dowries, thus	valuables, precious貝pue3
 ---
 > shells	formerly used as currency, cowries, thus: valuables, precious貝pue3
-43745c43717
+43718c43717
 < SJ	Societas Jesu, Jesuits耶穌會Ia5-soo1-hue7 (Catho-lic)
 ---
 > SJ	Societas Jesu, Jesuits耶穌會Ia5-soo1-hue7 (Catholic)
-44124c44096
+44097c44096
 < small profits quick returns, quick turnover	S.P.Q.R.薄利多銷poh8-li7 to1-siau1
 ---
 > small profits quick returns	quick turnover: S.P.Q.R.薄利多銷poh8-li7 to1-siau1
-44881c44853
+44854c44853
 < spark plug	火星塞hue2-tshui3-a2, phuh4-la2-guh4 (pho-netic)
 ---
 > spark plug	火星塞hue2-tshui3-a2, phuh4-la2-guh4 (phonetic)
-45182c45154
+45155c45154
 < spiritual communion	神領聖體sin5 nia2 Sing3-the2 (Catho-lic)
 ---
 > spiritual communion	神領聖體sin5 nia2 Sing3-the2 (Catholic)
-45342c45314
-< spread out cloth	hang clothing on a pole or rope, suspend, throw loosely over one's shoulders, lay loosely over a rail-ing, on the back of a chair披phuah8
----
-> spread out cloth	hang clothing on a pole or rope, suspend, throw loosely over one's shoulders, lay loosely over a railing, on the back of a chair披phuah8
-45485c45457
+45458c45457
 < SSPS	Holy Ghost Srs聖神會Sing3-sin5 Hue7 (Catho-lic)
 ---
 > SSPS	Holy Ghost Srs聖神會Sing3-sin5 Hue7 (Catholic)
-48156c48128
+48129c48128
 < tap dance	跳踢躂舞thiau3 thah4-puh4, tiao3 ti7-ta7-wu5 (pho-netic)
 ---
 > tap dance	跳踢躂舞thiau3 thah4-puh4, tiao3 ti7-ta7-wu5 (phonetic)
-49179c49151
+49152c49151
 < three abundances, ingredients of happy life	blessings, longevity, male offspring三多:多福,多壽,多子sam1-to1: to1-hok4, to1-siu7, to1-tsu2
 ---
 > three abundances	ingredients of happy life: blessings, longevity, male offspring三多:多福,多壽,多子sam1-to1: to1-hok4, to1-siu7, to1-tsu2
-50146c50118
+50119c50118
 < Transfiguration	耶穌顯聖容Ia5-soo1 hian2 Sing3-iong5 (Catho-lic)
 ---
 > Transfiguration	耶穌顯聖容Ia5-soo1 hian2 Sing3-iong5 (Catholic)
-50649c50621
-< trumpet	horn of an automobile, alarm siren, musical instrument which produces a sound, loudspeaker, brass wind in-strument喇叭koo2-tshue1, lah4-pah4 the sound of a trumpet喇叭聲koo2-tshue1 siann1 to blow the trumpet吹喇叭pun5 lah4-pah4, pun5 koo2-tshue1
----
-> trumpet	horn of an automobile, alarm siren, musical instrument which produces a sound, loudspeaker, brass wind instrument喇叭koo2-tshue1, lah4-pah4 the sound of a trumpet喇叭聲koo2-tshue1 siann1 to blow the trumpet吹喇叭pun5 lah4-pah4, pun5 koo2-tshue1
-50940c50912
-< twelve signs of the zodiac, the twelve animals used as the signs for the characters of the cycle of twelve	rat, cow, ti-ger, rabbit, dragon, snake, horse, sheep, monkey, chicken, dog, pig十二生肖:鼠,牛,虎,兔,龍,蛇,馬,羊,猴,雞,狗,豬tsap8-ji7 senn1-siunn3: tshi2, gu5, hoo2, thoo3, ling5 or long5, tsua5, be2, iunn5, kau5, ke1, kau2, ti1
+50913c50912
+< twelve signs of the zodiac, the twelve animals used as the signs for the characters of the cycle of twelve	rat, cow, tiger, rabbit, dragon, snake, horse, sheep, monkey, chicken, dog, pig十二生肖:鼠,牛,虎,兔,龍,蛇,馬,羊,猴,雞,狗,豬tsap8-ji7 senn1-siunn3: tshi2, gu5, hoo2, thoo3, ling5 or long5, tsua5, be2, iunn5, kau5, ke1, kau2, ti1
 ---
 > twelve signs of the zodiac	the twelve animals used as the signs for the characters of the cycle of twelve: rat, cow, tiger, rabbit, dragon, snake, horse, sheep, monkey, chicken, dog, pig十二生肖:鼠,牛,虎,兔,龍,蛇,馬,羊,猴,雞,狗,豬tsap8-ji7 senn1-siunn3: tshi2, gu5, hoo2, thoo3, ling5 or long5, tsua5, be2, iunn5, kau5, ke1, kau2, ti1
-51144c51116
-< unable to hinder	cannot be prevented, to try to stop, but fail in the attempt, unable to endure, cannot bear it, intoler-able擋不住,耐不了,忍不住tong3 be7-tiau5
----
-> unable to hinder	cannot be prevented, to try to stop, but fail in the attempt, unable to endure, cannot bear it, intolerable擋不住,耐不了,忍不住tong3 be7-tiau5
-52884c52856
+52857c52856
 < Vincentians	聖味增爵會Sing3 Bi7-tsing1-tsiok4-hue7 (Catho-lic)
 ---
 > Vincentians	聖味增爵會Sing3 Bi7-tsing1-tsiok4-hue7 (Catholic)
-55514c55486
+55487c55486
 < zapper	remote control遙控器iau5-khong2-tshi2 (pho-netic), iau5-khong3-khi3
 ---
 > zapper	remote control遙控器iau5-khong2-tshi2 (phonetic), iau5-khong3-khi3
-55547c55519
+55520c55519
 < Zodiac	names and order of animals in the Chinese Zodiac十二生肖:子,丑,寅,卯,辰,巳,午,未,申,酉,戌,亥(鼠,牛,虎,兔,龍,蛇,馬,羊,猴,雞,狗,豬)tsap8-ji7 senn1-siunn3: tsu2, thiunn2, in5, bau2, sin5, tsi7, ngoo2, bi7, sin1, iu2, sut4, hai7 (chhi2, gu5, ho2o, tho3o, le5ng, cho5a, be2, iu5nn, ka5u, ke, ka2u, ti)
 ---
-> Zodiac	names and order of animals in the Chinese Zodiac十二生肖:子,丑,寅,卯,辰,巳,午,未,申,酉,戌,亥(鼠,牛,虎,兔,龍,蛇,馬,羊,猴,雞,狗,豬)tsap8-ji7 senn1-siunn3: tsu2, thiunn2, in5, bau2, sin5, tsi7, ngoo2, bi7, sin1, iu2, sut4, hai7 (tshi2, gu5, hoo2, thoo3, leng5, tsoa5, be2, iunn5, kau5, ke1, kau2, ti1)
+> Zodiac	names and order of animals in the Chinese Zodiac十二生肖:子,丑,寅,卯,辰,巳,午,未,申,酉,戌,亥(鼠,牛,虎,兔,龍,蛇,馬,羊,猴,雞,狗,豬)tsap8-ji7 senn1-siunn3: tsu2, thiunn2, in5, bau2, sin5, tsi7, ngoo2, bi7, sin1, iu2, sut4, hai7 (tshi2, gu5, hoo2, thoo3, leng5, tsua5, be2, iunn5, kau5, ke1, kau2, ti1)
