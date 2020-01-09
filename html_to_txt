@@ -121,6 +121,7 @@ parens = re.compile('\([^)]+\)')
 
 
 def poj_to_tailo(string):
+    string = string.replace('*+', '+*')
     string = string.replace('+', 'o')
     string = string.replace('*h', f'nnh{magic}')
     string = string.replace('*', f'nn{magic}')
