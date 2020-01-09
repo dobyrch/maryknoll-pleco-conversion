@@ -3,7 +3,7 @@ output='maryknoll.txt'
 
 for c in {A..Z}; do
 	if [ ! -f "src/${c}-html.html" ]; then
-		echo "Converting ${c}.pdf..."
+		echo "Converting ${c}.pdf to html..."
 		pdftohtml -c -s "src/${c}.pdf" > /dev/null
 	fi
 done
