@@ -21,10 +21,10 @@ def get_entries(soup):
     entries = []
 
     def append_entry(english, taiwanese, chinese):
-        english = ''.join(s.replace('\xA0', ' ').rstrip('-') for s in english).strip()
+        english = ''.join(s.rstrip('-') for s in english).strip().replace('\xA0', ' ')
         # TODO: If text in parens, remove - and join as above
-        taiwanese = poj_to_tailo(''.join(s.replace('\xA0', ' ') for s in taiwanese).strip())
-        chinese = ''.join(s.replace('\xA0', ' ') for s in chinese).strip()
+        taiwanese = poj_to_tailo(''.join(taiwanese).strip().replace('\xA0', ' '))
+        chinese = ''.join(chinese).strip().replace('\xA0', ' ')
 
         if not english:
             english = 'FIXME'
