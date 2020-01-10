@@ -121,14 +121,15 @@ parens = re.compile('\([^)]+\)')
 
 
 def poj_to_tailo(string):
-    string = string.replace('*+h', f'onnh{magic}')
-    string = string.replace('+*h', f'onnh{magic}')
-    string = string.replace('*+', f'onn{magic}')
-    string = string.replace('+*', f'onn{magic}')
-    string = string.replace('*h', f'nnh{magic}')
-    string = string.replace('*', f'nn{magic}')
-    string = re.sub('\+([235789])?h', f'oh\\1{magic}', string)
-    string = re.sub('\+([235789])?', f'o\\1{magic}', string)
+    string = string.replace('*+', f'+*')
+    string = string.replace('+*h', f'onnh')
+    string = string.replace('+*', f'onn')
+    string = string.replace('*h', f'nnh')
+    string = re.sub('\*(?=[A-Za-z])', f'nn-', string)
+    string = string.replace('*', f'nn')
+    string = string.replace('+h', f'oh')
+    string = re.sub('\+(?=[A-Za-z])', f'o-', string)
+    string = string.replace('+', f'o')
     string = ' ' + string + ' '
     search_start = 1
 
@@ -162,7 +163,7 @@ def poj_to_tailo(string):
 
         string = string[:match_start] + word + string[match_end:]
 
-    return string[1:-1].replace(magic, '')
+    return string[1:-1]
 
 
 if __name__ == '__main__':
