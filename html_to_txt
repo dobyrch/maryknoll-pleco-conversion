@@ -121,10 +121,14 @@ parens = re.compile('\([^)]+\)')
 
 
 def poj_to_tailo(string):
-    string = string.replace('*+', '+*')
-    string = string.replace('+', 'o')
+    string = string.replace('*+h', f'onnh{magic}')
+    string = string.replace('+*h', f'onnh{magic}')
+    string = string.replace('*+', f'onn{magic}')
+    string = string.replace('+*', f'onn{magic}')
     string = string.replace('*h', f'nnh{magic}')
     string = string.replace('*', f'nn{magic}')
+    string = re.sub('\+([235789])?h', f'oh\\1{magic}', string)
+    string = re.sub('\+([235789])?', f'o\\1{magic}', string)
     string = ' ' + string + ' '
     search_start = 1
 
