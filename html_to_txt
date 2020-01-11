@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 def main():
     for c in ascii_uppercase:
-        with open(f'src/{c}-html.html') as f:
+        with open(f"src/{c}-html.html") as f:
             for entry in get_entries(BeautifulSoup(f, 'html.parser')):
                 print(entry)
 
@@ -121,15 +121,15 @@ parens = re.compile('\([^)]+\)')
 
 
 def poj_to_tailo(string):
-    string = string.replace('*+', f'+*')
-    string = string.replace('+*h', f'onnh')
-    string = string.replace('+*', f'onn')
-    string = string.replace('*h', f'nnh')
-    string = re.sub('\*(?=[A-Za-z])', f'nn-', string)
-    string = string.replace('*', f'nn')
-    string = string.replace('+h', f'oh')
-    string = re.sub('\+(?=[A-Za-z])', f'o-', string)
-    string = string.replace('+', f'o')
+    string = string.replace('*+', '+*')
+    string = string.replace('+*h', 'onnh')
+    string = string.replace('+*', 'onn')
+    string = string.replace('*h', 'nnh')
+    string = re.sub('\*(?=[A-Za-z])', 'nn-', string)
+    string = string.replace('*', 'nn')
+    string = string.replace('+h', 'oh')
+    string = re.sub('\+(?=[A-Za-z])', 'o-', string)
+    string = string.replace('+', 'o')
     string = ' ' + string + ' '
     search_start = 1
 
