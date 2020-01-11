@@ -156,6 +156,8 @@ def poj_to_tailo(string):
 
         word = word.replace('Ch', 'Ts')
         word = word.replace('ch', 'ts')
+        word = word.replace('Ek', 'Ik')
+        word = word.replace('ek', 'ik')
         word = word.replace('Eng', 'Ing')
         word = word.replace('eng', 'ing')
         word = re.sub('O([ae])', r'U\1', word)
