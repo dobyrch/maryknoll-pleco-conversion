@@ -21,10 +21,9 @@ def get_entries(soup):
     entries = []
 
     def append_entry(english, taiwanese, chinese):
-        english = ''.join(s.rstrip('-') for s in english).strip().replace('\xA0', ' ')
-        # TODO: If text in parens, remove - and join as above
-        taiwanese = poj_to_tailo(''.join(taiwanese).strip().replace('\xA0', ' '))
-        chinese = ''.join(chinese).strip().replace('\xA0', ' ')
+        english = english.strip()
+        taiwanese = poj_to_tailo(taiwanese.strip())
+        chinese = chinese.strip()
 
         if not english:
             english = 'FIXME'
@@ -69,9 +68,9 @@ def get_entries(soup):
                 class_ignore.add(ft)
 
 
-    english = []
-    taiwanese = []
-    chinese = []
+    english = ''
+    taiwanese = ''
+    chinese = ''
     lastcls = None
 
     for p in soup.find_all('p'):
@@ -87,18 +86,18 @@ def get_entries(soup):
             if lastcls in class_english:
                 for br in p('br'):
                     br.replaceWith(magic)
-                english.append(p.text.replace('-' + magic, '').replace(magic, ''))
+                english = join_lines(english, p.text.replace('-' + magic, '').replace(magic, ''))
             else:
                 if lastcls is not None:
                     append_entry(english, taiwanese, chinese)
-                english = [p.text]
-                taiwanese = []
-                chinese = []
+                english = join_lines('', p.text)
+                taiwanese = ''
+                chinese = ''
 
         elif cls in class_chinese:
-            chinese.append(p.text)
+            chinese = join_lines(chinese, p.text)
         elif cls in class_taiwanese:
-            taiwanese.append(p.text)
+            taiwanese = join_lines(taiwanese, p.text, True)
         else:
             assert False
 
@@ -107,6 +106,17 @@ def get_entries(soup):
     append_entry(english, taiwanese, chinese)
 
     return entries
+
+
+def join_lines(left, right, only_merge_parenthetical=False):
+    if left and left[-1] == '-':
+        if only_merge_parenthetical:
+            if left.count('(') > left.count(')'):
+                left = left[:-1]
+        else:
+                left = left[:-1]
+
+    return left + right.replace('\xA0', ' ')
 
 
 poj = re.compile(r'''
