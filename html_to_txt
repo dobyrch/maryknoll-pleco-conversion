@@ -125,6 +125,7 @@ def poj_to_tailo(string):
     string = string.replace('+*h', 'onnh')
     string = string.replace('+*', 'onn')
     string = string.replace('*h', 'nnh')
+    string = string.replace('h*', 'nnh')
     string = re.sub('\*(?=[A-Za-z])', 'nn-', string)
     string = string.replace('*', 'nn')
     string = string.replace('+h', 'oh')
